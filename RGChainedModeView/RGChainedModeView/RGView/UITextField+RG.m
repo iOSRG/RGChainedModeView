@@ -160,6 +160,27 @@
 }
 
 
+#pragma mark - 字体大小
+-(UITextField* (^)(CGFloat fontSize))rg_fontSize{
+    
+    return ^UITextField *(CGFloat fontSize){
+        
+        self.font = [UIFont systemFontOfSize:fontSize];
+        return self;
+        
+    };
+}
 
+#pragma mark - 字体颜色
+-(UITextField* (^)(UIColor *textColor))rg_textColor{
+    
+    return ^UITextField *(UIColor *textColor){
+        
+        self.textColor = textColor;
+        
+        return self;
+        
+    };
+}
 
 @end

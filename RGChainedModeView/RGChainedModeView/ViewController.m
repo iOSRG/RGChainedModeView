@@ -43,8 +43,7 @@
     rightV.rg_backgroundColor([UIColor blackColor]);
     tf.rg_Placeholder(@"textFild").rg_PlaceholderColor([UIColor blackColor]).rg_KeyboardType(UIKeyboardTypeNumberPad).rg_LeftViewAndLeftViewFrame(leftV,CGRectMake(0, 0, 30, 30)).rg_RightViewAndRightViewFrame(rightV,CGRectMake(0, 0, 30, 30));
 
-    
-    
+  
 }
 
 

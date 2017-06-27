@@ -10,6 +10,19 @@
 
 @interface UIButton (RG)
 
+
+/**
+ * 默认的背景图片
+ *
+ */
+-(UIButton* (^)(NSString *imageName))rg_NormalBackImageName;
+
+/**
+ * 选择的背景图片
+ *
+ */
+-(UIButton* (^)(NSString *imageName))rg_SelectedBackImageName;
+
 /**
  * 默认的图片
  *
@@ -53,5 +66,23 @@
  */
 -(UIButton* (^)(CGFloat titleFontSize))rg_titleFontSize;
 
+/**
+ * 选中状态下的文字颜色
+ *
+ */
+-(UIButton* (^)(UIColor *color))rg_SelectedTitleColor;
+
+/**
+ * 正常状态下的文字颜色
+ *
+ */
+-(UIButton* (^)(UIColor *color))rg_NormalTitleColor;
+
+
+/**
+ * 是否能使用
+ *
+ */
+-(UIButton* (^)(BOOL enabled))rg_userInteractionEnabled;
 
 @end

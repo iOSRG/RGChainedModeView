@@ -11,6 +11,33 @@
 @implementation UIButton (RG)
 
 
+#pragma mark -默认的背景图片
+-(UIButton* (^)(NSString *imageName))rg_NormalBackImageName
+{
+    
+    return ^(NSString *imageName){
+        
+        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        
+        return self;
+        
+    };
+}
+
+
+#pragma mark -选择的背景图片
+-(UIButton* (^)(NSString *imageName))rg_SelectedBackImageName
+{
+    
+    return ^(NSString *imageName){
+        
+        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateSelected];
+        
+        return self;
+        
+    };
+}
+
 
 #pragma mark -默认的图片
 -(UIButton* (^)(NSString *imageName))rg_NormalImageName
@@ -18,7 +45,7 @@
     
     return ^(NSString *imageName){
         
-           [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         
         return self;
         
@@ -32,7 +59,7 @@
     
     return ^(NSString *imageName){
         
-        [self setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateSelected];
+        [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateSelected];
         
         return self;
         
@@ -79,6 +106,34 @@
 }
 
 
+#pragma mark -正常状态下的文字颜色
+-(UIButton* (^)(UIColor *color))rg_NormalTitleColor
+{
+    
+    return ^(UIColor *color){
+        
+        [self setTitleColor:color forState:UIControlStateNormal];
+        return self;
+        
+    };
+}
+
+#pragma mark - 选中状态下的文字颜色
+-(UIButton* (^)(UIColor *color))rg_SelectedTitleColor
+{
+    
+    return ^(UIColor *color){
+        
+        [self setTitleColor:color forState:UIControlStateSelected];
+        return self;
+        
+    };
+}
+
+
+
+
+
 
 #pragma mark - 自定义标题,颜色和状态
 -(UIButton* (^)(NSString *title , UIColor *color,UIControlState controlState))rg_ControlStateForTitleAndColor
@@ -111,6 +166,17 @@
     };
 }
 
+#pragma mark -是否能使用
+-(UIButton* (^)(BOOL enabled))rg_userInteractionEnabled
+{
+    
+    return ^(BOOL enabled){
+        
+        self.userInteractionEnabled =  enabled;
+        return self;
+        
+    };
+}
 
 
 @end

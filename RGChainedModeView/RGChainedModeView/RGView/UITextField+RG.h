@@ -37,4 +37,20 @@
 //右视图
 -(UITextField* (^)(UIView *rightView))rg_RightView;
 
+/**
+ * 字体大小
+ *
+ */
+-(UITextField* (^)(CGFloat fontSize))rg_fontSize;
+
+/**
+ * 字体大小
+ *
+ */
+-(UITextField* (^)(UIColor *textColor))rg_textColor;
+
+
+
+
+    
 @end
