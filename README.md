@@ -5,11 +5,9 @@
 
 1.利用链式编程可以快捷的给一个对象设置相关的属性,亦增加代码的简洁性和可读性
 
- 给一个button设置文字,颜色,圆角
+下面简单给一个button设置文字,颜色,圆角,字体大小和选中状态等
 
-
-
-  #import "ViewController.h"
+#import "ViewController.h"
 #import "RGView.h"
 
 @interface ViewController ()
@@ -22,7 +20,7 @@
     [super viewDidLoad];
   
 
-
+   
     //注意调用父类方法必须放到最后,因为返回值为必须指定一个真实类型才能继续使用点语法;
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(250, 100, 100, 100)];
