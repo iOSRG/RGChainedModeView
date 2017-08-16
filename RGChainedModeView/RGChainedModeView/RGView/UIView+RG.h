@@ -32,4 +32,6 @@
 
 - (UIView * (^)(UIViewContentMode  contentMode))rg_contentMode;
 
+/**设置透明度*/
+-(UIView* (^)(CGFloat alpha))rg_alpha;
 @end

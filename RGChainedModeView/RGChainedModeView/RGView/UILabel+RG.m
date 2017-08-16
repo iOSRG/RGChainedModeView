@@ -25,6 +25,18 @@
 }
 
 
+-(UILabel* (^)(NSInteger numberOfLines))rg_numberOfLines
+{
+    
+    return ^(NSInteger numberOfLines){
+        
+        self.numberOfLines = numberOfLines;
+        return self;
+        
+    };
+}
+
+
 
 -(UILabel* (^)(NSTextAlignment textAlignment))rg_textAlignment
 {
