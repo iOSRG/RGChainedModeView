@@ -18,4 +18,8 @@
 
 -(UILabel* (^)(CGFloat fontSize))rg_fontSize;
 
+
+/**设置行数*/
+-(UILabel* (^)(NSInteger numberOfLines))rg_numberOfLines;
+
 @end

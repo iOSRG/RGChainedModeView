@@ -27,6 +27,18 @@
     };
 }
 
+-(UIView* (^)(CGFloat alpha))rg_alpha
+{
+    
+    return ^(CGFloat  alpha){
+        
+        self.alpha = alpha;
+        return self;
+        
+    };
+}
+
+
 
 
 #pragma mark - 设置父view
