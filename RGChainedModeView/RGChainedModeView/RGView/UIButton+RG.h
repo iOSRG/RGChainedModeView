@@ -85,4 +85,13 @@
  */
 -(UIButton* (^)(BOOL enabled))rg_userInteractionEnabled;
 
+
+/**
+ * 不可选状态下的文字
+ *
+ */
+-(UIButton* (^)(NSString *title))rg_DisabledTitle;
+/**不可选状态下的文字颜色*/
+-(UIButton* (^)(UIColor *color))rg_DisabledTitleColor;
+
 @end

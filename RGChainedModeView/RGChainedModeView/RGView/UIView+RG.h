@@ -34,4 +34,8 @@
 
 /**设置透明度*/
 -(UIView* (^)(CGFloat alpha))rg_alpha;
+
+/**设置hidden*/
+-(UIView* (^)(BOOL hidden))rg_hidden;
+
 @end

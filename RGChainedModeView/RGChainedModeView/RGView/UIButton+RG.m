@@ -131,7 +131,29 @@
 }
 
 
+#pragma mark - 不可选的标题
+-(UIButton* (^)(NSString *title))rg_DisabledTitle
+{
+    
+    return ^(NSString *title){
+        
+        [self setTitle:title forState:UIControlStateDisabled];
+        return self;
+        
+    };
+}
 
+#pragma mark -不可选状态下的文字颜色
+-(UIButton* (^)(UIColor *color))rg_DisabledTitleColor
+{
+    
+    return ^(UIColor *color){
+        
+        [self setTitleColor:color forState:UIControlStateDisabled];
+        return self;
+        
+    };
+}
 
 
 

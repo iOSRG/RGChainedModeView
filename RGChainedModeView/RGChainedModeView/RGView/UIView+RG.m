@@ -98,6 +98,16 @@
 }
 
 
-
+#pragma mark - hidden设置
+-(UIView* (^)(BOOL hidden))rg_hidden
+{
+    
+    return ^(BOOL  hidden){
+        
+        self.hidden = hidden;
+        return self;
+        
+    };
+}
 
 @end

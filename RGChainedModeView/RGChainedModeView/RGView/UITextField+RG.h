@@ -48,8 +48,8 @@
  *
  */
 -(UITextField* (^)(UIColor *textColor))rg_textColor;
-
-
+/**一键清除*/
+-(UITextField* (^)(UITextFieldViewMode mode))rg_clearsEditing;
 
 
     

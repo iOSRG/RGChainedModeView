@@ -183,4 +183,17 @@
     };
 }
 
+#pragma mark - 一键清除
+-(UITextField* (^)(UITextFieldViewMode mode))rg_clearsEditing{
+    
+    return ^UITextField *(UITextFieldViewMode mode){
+        
+        self.clearsOnBeginEditing = NO;
+        self.clearButtonMode = mode;
+        
+        return self;
+        
+    };
+}
+
 @end
