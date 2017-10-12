@@ -196,4 +196,59 @@
     };
 }
 
+#pragma mark - 光标颜色
+
+- (UITextField* (^)(UIColor *tintColor))rg_tincolor
+{
+    return ^UITextField *(UIColor *tintColor){
+        
+        self.tintColor = tintColor;
+        
+        return self;
+        
+    };
+}
+
+#pragma mark - 边框样式
+
+- (UITextField* (^)(UITextBorderStyle borderStyle))rg_borderStyle
+{
+    return ^UITextField *(UITextBorderStyle borderStyle){
+        
+//        UITextBorderStyleNone,
+//        UITextBorderStyleLine,
+//        UITextBorderStyleBezel,
+//        UITextBorderStyleRoundedRect
+        
+        self.borderStyle = borderStyle;
+        return self;
+        
+    };
+}
+
+#pragma mark - done按钮的样式
+- (UITextField* (^)(UIReturnKeyType returnKeyType))rg_returnKeyType
+{
+    return ^UITextField *(UIReturnKeyType returnKeyType){
+        
+//        UIReturnKeyDefault,
+//        UIReturnKeyGo,
+//        UIReturnKeyGoogle,
+//        UIReturnKeyJoin,
+//        UIReturnKeyNext,
+//        UIReturnKeyRoute,
+//        UIReturnKeySearch,
+//        UIReturnKeySend,
+//        UIReturnKeyYahoo,
+//        UIReturnKeyDone,
+//        UIReturnKeyEmergencyCall,
+//        UIReturnKeyContinue
+        
+        self.returnKeyType = returnKeyType;
+        return self;
+        
+    };
+}
+
+
 @end

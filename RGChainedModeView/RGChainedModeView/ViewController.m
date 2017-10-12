@@ -36,6 +36,8 @@
     
     
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(210, 300, 150, 30)];
+    tf.rg_returnKeyType(UIReturnKeySend);
+    tf.rg_tincolor([UIColor greenColor]);
     tf.rg_supView(self.view).rg_backgroundColor([UIColor redColor]);
     UIView *leftV = [[UIView alloc] init];
     UIView *rightV = [[UIView alloc] init];

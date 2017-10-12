@@ -50,7 +50,14 @@
 -(UITextField* (^)(UIColor *textColor))rg_textColor;
 /**一键清除*/
 -(UITextField* (^)(UITextFieldViewMode mode))rg_clearsEditing;
+/**光标颜色*/
+- (UITextField* (^)(UIColor *tintColor))rg_tincolor;
 
 
-    
+/**边框样式*/
+- (UITextField* (^)(UITextBorderStyle borderStyle))rg_borderStyle;
+
+/**done按钮的样式*/
+- (UITextField* (^)(UIReturnKeyType returnKeyType))rg_returnKeyType;
+
 @end
